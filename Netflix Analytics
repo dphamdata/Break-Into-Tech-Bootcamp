@@ -17,21 +17,75 @@ WHERE type = 'Movie';
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 2: When was the most recent batch of tv shows and/or movies added to the database?
+Question 2: When was the most recent movie added to the database? What is the title? 
 
+SELECT title, date_added, type
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+WHERE type = 'Movie' 
+ORDER BY date_added DESC
+LIMIT 1;
 
--------------------------------------------------------------------------------------------------------------------------------------------------
-
-Question 3: List all the movies and tv shows in alphabetical order.
-
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------
-
-Question 4: Who was the Director for the movie Bright Star?
+# The most recent movie added to the database was "Dick Johnson Is Dead", on 2021-09-25. 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 5: What is the oldest movie in the database and what year was it made?
+Question 3: What is the longest duration for movies? How many movies have that duration?
+
+SELECT count(title)
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" 
+WHERE type = 'Movie'
+AND duration >= '99 min'
+GROUP BY duration
+
+# The longest movies are 99 minutes long. 118 movies are 99 minutes long.  
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 4: List all the movies and tv shows in alphabetical order.
+
+SELECT title
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+ORDER BY title ASC;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 5: Who was the Director for the movie Bright Star?
+
+SELECT director 
+FROM "CharlotteChaze/BreakIntoTech"."netflix_people" people
+LEFT JOIN "CharlotteChaze/BreakIntoTech"."netflix_titles_info" title
+ON people.show_id = title.show_id
+WHERE title = 'Bright Star'
+
+# Jane Campion directed 'Bright Star'. 
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 6: What is the oldest movie in the database and what year was it made?
+
+SELECT title, release_year  
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" 
+WHERE type = 'Movie'
+ORDER BY release_year ASC 
+LIMIT 1; 
+
+# The oldest movie in the database is "Prelude to War", release in 1942. 
+
+Question 7: What are the top (5) "Ratings" for TV Show. List by TV Show count. 
+
+SELECT count(title), rating
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info" 
+WHERE type = 'TV Show'
+GROUP BY rating
+ORDER BY count(title) DESC
+LIMIT 5;
+
+# The top (5) Ratings are: 
+
+1) TV-MA with 1145 total shows.
+2) TV-14 with 733 total shows. 
+3) TV-PG with 323 total shows. 
+4) TV-Y7 with 195 total shows. 
+5) TV-Y with 176 total shows. 
 
 
