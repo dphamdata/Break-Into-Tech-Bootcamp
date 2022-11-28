@@ -9,6 +9,11 @@ ON people.show_id=titles.show_id;
 
 Question 1: How many movie titles are there in the database? (movies only, not tv shows)
 
+SELECT count(*)
+FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
+WHERE type = 'Movie';
+
+# There are 6131 movie titles in the database. 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
