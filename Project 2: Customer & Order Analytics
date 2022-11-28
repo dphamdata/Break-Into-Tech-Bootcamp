@@ -19,18 +19,34 @@ Question 4: Which product was the cheapest one sold in January, and what was the
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Question 5: What is the total revenue for each product sold in January? 
-(Revenue can be calculated using the number of products sold and the price of the products).
+# Revenue can be calculated using the number of products sold and the price of the products.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Question 6: Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
 
-
 --------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 Question 7: How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
+Question 8: Which locations in New York received at least 3 orders in January, and how many orders did they each receive? (Hint: use HAVING).
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 9: How many of each type of headphone were sold in February?
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 10: What was the average amount spent per account in February? (Hints: For this question, we want the average amount spent / number of accounts, not the amount spent by each account. To multiply, you can use the * symbol, and to divide, you can use the / symbol.)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 11: What was the average quantity of products purchased per account in February? (Hint: just like question 3, we want the overall average, not the average for each account individually).
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 12: Which product brought in the most revenue in January and how much revenue did it bring in total?
 
 
