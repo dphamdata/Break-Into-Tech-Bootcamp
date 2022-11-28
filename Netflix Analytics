@@ -1,7 +1,9 @@
 # Joining Tables 
 
-
-
+SELECT people.show_id, people.director, titles.title, titles.type
+FROM "CharlotteChaze/BreakIntoTech"."netflix_people" people
+LEFT JOIN "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles
+ON people.show_id=titles.show_id;
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
