@@ -1,0 +1,10 @@
+# Creating Book Database 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE books (id integer primary key, name text, rating integer);
+
+INSERT INTO books values 
+(1, 'Biochem', 3),
+(2, 'Art History', 2),
+(3, 'SQL', 3);
