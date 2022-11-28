@@ -27,26 +27,31 @@ Question 6: Which products were sold in February at 548 Lincoln St, Seattle, WA 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 7: How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?
+Question 7: List all the products sold in Los Angeles in February, and include how many of each were sold.
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 8: Which locations in New York received at least 3 orders in January, and how many orders did they each receive? (Hint: use HAVING).
+Question 8: How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 9: How many of each type of headphone were sold in February?
+Question 9: Which locations in New York received at least 3 orders in January, and how many orders did they each receive? (Hint: use HAVING).
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 10: What was the average amount spent per account in February? (Hints: For this question, we want the average amount spent / number of accounts, not the amount spent by each account. To multiply, you can use the * symbol, and to divide, you can use the / symbol.)
+Question 10: How many of each type of headphone were sold in February?
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 11: What was the average quantity of products purchased per account in February? (Hint: just like question 3, we want the overall average, not the average for each account individually).
+Question 11: What was the average amount spent per account in February? (Hints: For this question, we want the average amount spent / number of accounts, not the amount spent by each account. To multiply, you can use the * symbol, and to divide, you can use the / symbol.)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 12: Which product brought in the most revenue in January and how much revenue did it bring in total?
+Question 12: What was the average quantity of products purchased per account in February? (Hint: just like question 3, we want the overall average, not the average for each account individually).
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 13: Which product brought in the most revenue in January and how much revenue did it bring in total?
 
 
