@@ -1,3 +1,7 @@
+Project 1: Netflix Analytics
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
 Question 1: How many movie titles are there in the database? (movies only, not tv shows)
 
 SELECT count(*)
