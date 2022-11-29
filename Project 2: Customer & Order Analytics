@@ -29,8 +29,9 @@ ORDER BY Price DESC
 
 # The Macbook Pro Laptop was the highest product sold in February, priced at $1,700. 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 4: What was the total sales revenue from that product?
+Question 4: What was the total sales revenue from that product (from Question 3)?
 
 SELECT sum(price)
 FROM FebSales
