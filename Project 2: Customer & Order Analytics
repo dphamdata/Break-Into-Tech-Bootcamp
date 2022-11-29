@@ -30,7 +30,7 @@ ORDER BY Price DESC
 # The Macbook Pro Laptop was the highest product sold in February, priced at $1,700. 
 
 
-Question 4: What was the total sales amount from that product?
+Question 4: What was the total sales revenue from that product?
 
 SELECT sum(price)
 FROM FebSales
@@ -38,7 +38,7 @@ WHERE product = 'Macbook Pro Laptop'
 
 # $467,500 was made from selling Macbook Pros. 
 
-* Data Validation) 
+* Data Validation *
 
 SELECT count(product)
 FROM FebSales
