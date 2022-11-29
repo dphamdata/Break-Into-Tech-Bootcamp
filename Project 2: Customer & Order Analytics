@@ -21,48 +21,77 @@ WHERE product LIKE '%IPhone%';
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 3: Select the customer account numbers for all the orders that were placed in February.
+Question 3: What was the highest priced product sold in February? How much does it cost? 
+
+SELECT Product, Price, Quantity
+FROM FebSales
+ORDER BY Price DESC
+
+# The Macbook Pro Laptop was the highest product sold in February, priced at $1,700. 
+
+
+Question 4: What was the total sales amount from that product?
+
+SELECT sum(price)
+FROM FebSales
+WHERE product = 'Macbook Pro Laptop'
+
+# $467,500 was made from selling Macbook Pros. 
+
+* Data Validation) 
+
+SELECT count(product)
+FROM FebSales
+WHERE product = 'Macbook Pro Laptop'
+
+# 275 total Macbook Pros were sold in Feb. 275 (total sold) * 1700 (price per laptop) = $467,500.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 4: Which product was the cheapest one sold in January, and what was the price?
+Question 5: Which product was the cheapest one sold in January, and what was the price?
+
+SELECT DISTINCT(Product), Price
+FROM JanSales
+ORDER BY Price ASC
+
+# The cheapest product sold in January were the 4-pack AAA batteries, priced at $2.99 per unit. 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 5: What is the total revenue for each product sold in January? 
+Question 6: What is the total revenue for each product sold in January? 
 # Revenue can be calculated using the number of products sold and the price of the products.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 6: Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
+Question 7: Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 7: List all the products sold in Los Angeles in February, and include how many of each were sold.
+Question 8: List all the products sold in Los Angeles in February, and include how many of each were sold.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 8: How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?
+Question 9: How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 9: Which locations in New York received at least 3 orders in January, and how many orders did they each receive? (Hint: use HAVING).
+Question 10: Which locations in New York received at least 3 orders in January, and how many orders did they each receive? (Hint: use HAVING).
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 10: How many of each type of headphone were sold in February?
+Question 11: How many of each type of headphone were sold in February?
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 11: What was the average amount spent per account in February? (Hints: For this question, we want the average amount spent / number of accounts, not the amount spent by each account. To multiply, you can use the * symbol, and to divide, you can use the / symbol.)
+Question 12: What was the average amount spent per account in February? (Hints: For this question, we want the average amount spent / number of accounts, not the amount spent by each account. To multiply, you can use the * symbol, and to divide, you can use the / symbol.)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 12: What was the average quantity of products purchased per account in February? (Hint: just like question 3, we want the overall average, not the average for each account individually).
+Question 13: What was the average quantity of products purchased per account in February? (Hint: just like question 3, we want the overall average, not the average for each account individually).
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 13: Which product brought in the most revenue in January and how much revenue did it bring in total?
+Question 14: Which product brought in the most revenue in January and how much revenue did it bring in total?
 
 
