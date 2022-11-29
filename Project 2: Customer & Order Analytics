@@ -4,6 +4,11 @@ Project 2: Customer & Order Analytics
 
 Question 1: How many orders were placed in January?
 
+SELECT DISTINCT count(orderID)
+FROM JanSales
+
+# January contained a total of 9723 sales. 
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Question 2: How many of those orders were for an iPhone?
