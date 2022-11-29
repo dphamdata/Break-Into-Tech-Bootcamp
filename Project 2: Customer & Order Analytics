@@ -7,11 +7,17 @@ Question 1: How many orders were placed in January?
 SELECT DISTINCT count(orderID)
 FROM JanSales
 
-# January contained a total of 9723 sales. 
+# January contained a total of 9,723 sales. 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 2: How many of those orders were for an iPhone?
+Question 2: How many of those orders (in January) were for an iPhone?
+
+SELECT DISTINCT count(orderID)
+FROM JanSales
+WHERE product LIKE '%IPhone%';
+
+# Of the 9,723 total sales in January, a total of 379 orders were made for Iphones. 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
