@@ -150,18 +150,16 @@ ORDER BY Total_Sold DESC;
 
 Question 11: What was the average amount spent per account in April? 
 
-#(Hints: For this question, we want the average amount spent / number of accounts, not the amount spent by each account. 
-To multiply, you can use the * symbol, and to divide, you can use the / symbol.)
+SELECT round(avg(quantity * price),2) AS Average_Spend
+FROM AprSales Apr
+LEFT JOIN customers cust 
+ON Apr.orderID = cust.order_id
 
-
---------------------------------------------------------------------------------------------------------------------------------------------------
-
-Question 12: What was the average quantity of products purchased per account in February? 
-# (Hint: just like question 3, we want the overall average, not the average for each account individually).
+# The average customer account spend $173.52 in April. 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 13: Which product brought in the most revenue in May and how much revenue did it bring in total?
+Question 12: Which product brought in the most revenue in May and how much revenue did it bring in total?
 
 SELECT Product, round(sum(price * quantity),2)
 AS Total_Revenue
@@ -171,3 +169,11 @@ ORDER BY Total_Revenue DESC
 LIMIT 1
 
 # In May, the "Macbook Pro Laptop" brought in the most revenue, totaling to $787,100.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Question 13: Which customer account spent the most in May? What did they buy? What was their total spend?
+
+# In May, the customer with OrderID 200528 spent the most, spending $3,400 from (2) Macbook Pro Laptops. 
+
+
