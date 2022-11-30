@@ -62,10 +62,23 @@ ORDER BY Price ASC
 Question 6: What is the total revenue for each product sold in January? 
 # Revenue can be calculated using the number of products sold and the price of the products.
 
+SELECT product, round(sum(price * quantity),2)
+AS Total_Revenue
+FROM JanSales
+
+# Rounded to (2) decimal places, total revenue from all products was $1,815,335.12.
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 7: Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
+Question 7: What were the top (5) selling items in January (by total sales? What was the total revenue from each item?
 
+# The top (5) selling items in January were: 
+
+1) Macbook Pro Laptop: Total $399,500
+2) IPhone: Total $265,300
+3) ThinkPad Laptop: Total $216,997.83
+4) Google Phone: Total: $190,800
+5) Apple Airpods Headphones	Total: $122,100
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Question 8: List all the products sold in Los Angeles in February, and include how many of each were sold.
