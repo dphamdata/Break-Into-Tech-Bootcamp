@@ -90,6 +90,30 @@ LIMIT 5;
 
 Question 8: List all the products sold in Los Angeles in February, and include how many of each were sold.
 
+SELECT Product, sum(Quantity)
+FROM FebSales
+GROUP BY Product
+
+# Products sold in February, and their total amounts per product. 
+20in Monitor:	246
+27in 4K Gaming Monitor:	428
+27in FHD Monitor:	475
+34in Ultrawide Monitor:	418
+AA Batteries (4-pack):	1736
+AAA Batteries (4-pack):	1975
+Apple Airpods Headphones:	1013
+Bose SoundSport Headphones:	844
+Flatscreen TV:	314
+Google Phone:	381
+LG Dryer:	38
+LG Washing Machine:	40
+Lightning Charging Cable:	1497
+Macbook Pro Laptop:	275
+ThinkPad Laptop:	277
+USB-C Charging Cable:	1654
+Vareebadd Phone:	129
+Wired Headphones:	1282
+iPhone:	439
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
