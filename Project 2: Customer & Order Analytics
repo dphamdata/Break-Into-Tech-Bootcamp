@@ -72,6 +72,13 @@ FROM JanSales
 
 Question 7: What were the top (5) selling items in January (by total sales? What was the total revenue from each item?
 
+SELECT product, round(sum(price * quantity),2)
+AS Total_Revenue
+FROM JanSales
+GROUP BY Product
+ORDER BY Total_Revenue DESC
+LIMIT 5;
+
 # The top (5) selling items in January were: 
 
 1) Macbook Pro Laptop: Total $399,500
