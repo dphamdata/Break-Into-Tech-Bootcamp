@@ -59,10 +59,10 @@ ORDER BY Price ASC
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 6: What is the total revenue for each product sold in January? 
+Question 6: What is the total revenue made in January? 
 # Revenue can be calculated using the number of products sold and the price of the products.
 
-SELECT product, round(sum(price * quantity),2)
+SELECT round(sum(price * quantity),2)
 AS Total_Revenue
 FROM JanSales
 
@@ -86,6 +86,7 @@ LIMIT 5;
 3) ThinkPad Laptop: Total $216,997.83
 4) Google Phone: Total: $190,800
 5) Apple Airpods Headphones	Total: $122,100
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Question 8: List all the products sold in Los Angeles in February, and include how many of each were sold.
@@ -94,53 +95,79 @@ SELECT Product, sum(Quantity)
 FROM FebSales
 GROUP BY Product
 
-# Products sold in February, and their total amounts per product. 
-20in Monitor:	246
-27in 4K Gaming Monitor:	428
-27in FHD Monitor:	475
-34in Ultrawide Monitor:	418
-AA Batteries (4-pack):	1736
-AAA Batteries (4-pack):	1975
-Apple Airpods Headphones:	1013
-Bose SoundSport Headphones:	844
-Flatscreen TV:	314
-Google Phone:	381
-LG Dryer:	38
-LG Washing Machine:	40
-Lightning Charging Cable:	1497
-Macbook Pro Laptop:	275
-ThinkPad Laptop:	277
-USB-C Charging Cable:	1654
-Vareebadd Phone:	129
-Wired Headphones:	1282
-iPhone:	439
+# Products sold in February, and their total amounts per product: 
+
+20in Monitor:	246 total 
+27in 4K Gaming Monitor:	428 total 
+27in FHD Monitor:	475 total 
+34in Ultrawide Monitor:	418 total 
+AA Batteries (4-pack):	1736 total 
+AAA Batteries (4-pack):	1975 total 
+Apple Airpods Headphones:	1013 total 
+Bose SoundSport Headphones:	844 total 
+Flatscreen TV:	314 total 
+Google Phone:	381 total 
+LG Dryer:	38 total 
+LG Washing Machine:	40 total 
+Lightning Charging Cable:	1497 total 
+Macbook Pro Laptop:	275 total 
+ThinkPad Laptop:	277 total 
+USB-C Charging Cable:	1654 total 
+Vareebadd Phone:	129 total 
+Wired Headphones:	1282 total 
+iPhone:	439 total 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 9: How many customers ordered more than 2 products at a time in February, and what was the average amount spent for those customers?
+Question 9: How many customers ordered more than 2 products at a time in March, and what was the average amount spent for those customers?
+
+SELECT count(distinct acctnum), round(avg(quantity * price),2) AS Average_Spend
+FROM MarSales Mar
+LEFT JOIN customers cust 
+ON Mar.orderID = cust.order_id
+WHERE quantity > 2
+
+# In March, (34) customers bought over (2) items at a time. Of those customers, they spent $3.35 on average. 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 10: Which locations in New York received at least 3 orders in January, and how many orders did they each receive? (Hint: use HAVING).
+Question 10: How many of each type of headphone were sold in April?
+
+SELECT product AS HeadPhone, 
+Count(product) AS Total_Sold
+FROM AprSales
+WHERE product LIKE ('%Headphones%')
+GROUP BY product
+ORDER BY Total_Sold DESC;
+
+# In April, total Headphone sales consisted of the following: 
+
+1) Wired Headphones:	1890 sold
+2) Apple Airpods Headphones:	1515 sold
+3) Bose SoundSport Headphones: 1280 sold
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 11: How many of each type of headphone were sold in February?
-
---------------------------------------------------------------------------------------------------------------------------------------------------
-
-Question 12: What was the average amount spent per account in February? 
+Question 11: What was the average amount spent per account in April? 
 
 #(Hints: For this question, we want the average amount spent / number of accounts, not the amount spent by each account. 
 To multiply, you can use the * symbol, and to divide, you can use the / symbol.)
 
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 13: What was the average quantity of products purchased per account in February? 
+Question 12: What was the average quantity of products purchased per account in February? 
 # (Hint: just like question 3, we want the overall average, not the average for each account individually).
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Question 14: Which product brought in the most revenue in January and how much revenue did it bring in total?
+Question 13: Which product brought in the most revenue in May and how much revenue did it bring in total?
 
+SELECT Product, round(sum(price * quantity),2)
+AS Total_Revenue
+FROM MaySales
+GROUP BY Product
+ORDER BY Total_Revenue DESC
+LIMIT 1
 
+# In May, the "Macbook Pro Laptop" brought in the most revenue, totaling to $787,100.
