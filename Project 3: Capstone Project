@@ -4,10 +4,20 @@ Project #3: Capstone Project
 
 Task #1: Show Customers (their full names, customer ID, and country) who are not in the US. (Hint: != or <> can be used to say "is not equal to").
 
+SELECT CustomerId, FirstName, LastName, Country 
+FROM Customers 
+WHERE Country != 'USA'
+
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Task #2: Show only the Customers from Brazil.
+Task #2: Find how many customers are from Brazil.
 
+SELECT COUNT (distinct CustomerId)
+FROM Customers 
+WHERE Country = 'Brazil'
+
+# (5) customers are from Brazil. 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Task #3: Find the Invoices of customers who are from Brazil. 
@@ -16,8 +26,11 @@ Task #3: Find the Invoices of customers who are from Brazil.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 Task #4: Show the Employees who are Sales Agents.
+
+SELECT EmployeeID, FirstName, LastName, Title
+FROM employees
+WHERE Title LIKE '%Sales%'
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
