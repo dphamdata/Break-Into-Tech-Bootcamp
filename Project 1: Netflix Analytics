@@ -8,7 +8,7 @@ SELECT count(*)
 FROM "CharlotteChaze/BreakIntoTech"."netflix_titles_info"
 WHERE type = 'Movie';
 
-# There are 6131 movie titles in the database. 
+# There are 6,131 movie titles in the database. 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
