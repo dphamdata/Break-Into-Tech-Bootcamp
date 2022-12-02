@@ -23,6 +23,11 @@ WHERE Country = 'Brazil'
 Task #3: Find the Invoices of customers who are from Brazil. 
 # The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
 
+SELECT cust.FirstName, cust.LastName, inv.InvoiceId, inv.InvoiceDate
+FROM invoices as inv 
+LEFT JOIN customers as cust 
+ON inv.CustomerId = cust.CustomerId
+WHERE inv.BillingCountry = "Brazil"
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -36,9 +41,13 @@ WHERE Title LIKE '%Sales%'
 
 Task #5: Find a unique/distinct list of billing countries from the Invoice table.
 
+SELECT DISTINCT BillingCountry 
+FROM Invoices
+
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
-Task #6: Provide a query that shows the invoices associated with each sales agent. The resulting table should include the Sales Agent's full name.
+Task #6: Provide a query that shows the invoices associated with each sales agent. 
+# The resulting table should include the Sales Agent's full name.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -48,6 +57,10 @@ Task #7: Show the Invoice Total, Customer name, Country, and Sales Agent name fo
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
 Task #8: How many Invoices were there in 2009?
+
+SELECT COUNT(*)
+FROM Invoices
+WHERE InvoiceDate BETWEEN '2009-01-01' AND '2009-12-31';
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 
